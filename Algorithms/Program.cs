@@ -8,7 +8,8 @@ namespace Algorithms
         static void Main()
         {
             var ss = new SortService();
-            ss.InsertionSort();
+            //ss.InsertionSort();
+            ss.BubbleSort();
         }
 
     
