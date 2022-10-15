@@ -9,7 +9,8 @@ namespace Algorithms
         {
             var ss = new SortService();
             //ss.InsertionSort();
-            ss.BubbleSort();
+            //ss.BubbleSort();
+            ss.ShellSort();
         }
 
     

@@ -60,6 +60,36 @@ namespace Algorithms.Service
             list.ForEach( x => Console.Write($"{x} "));
             Console.ReadKey();
         }
+
+        public void ShellSort()
+        {
+            var list = new List<int>() { 10, 3, 1, 9, 7, 6, 8, 2, 4, 5 };
+           
+            for (int step = list.Count / 2; step > 0; step = step / 2)
+            {
+                int j;
+                for (int i = step; i < list.Count; i++)
+                {
+                    int tmp = list[i];
+                    for (j = i; j >= step; j -= step)
+                    {
+                        if (list[j - step] > tmp)
+                        {
+                            list[j] = list[j - step];
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    list[j] = tmp;
+                }
+            }
+
+            list.ForEach(x => Console.Write($"{x} "));
+            Console.ReadKey();
+        }
+
     }
 }
 
